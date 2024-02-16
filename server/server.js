@@ -1,3 +1,4 @@
+// inport packages and files
 import express from "express";
 import session from "express-session";
 import cors from "cors";
@@ -20,29 +21,20 @@ app.use(
   })
 );
 
+// Import handlers
+import handlerFunctions from "./controller.js";
+
+// Routes
+app.get("/hello", handlerFunctions.sayHello);
+app.get("/cars", handlerFunctions.getAllCars);
+app.post("/addCar", handlerFunctions.addCar);
+app.delete("/deleteCar/:id", handlerFunctions.deleteCar);
+app.put("/updateCar/:id", handlerFunctions.updateCar);
+
+// start up the server
+app.listen(8000, () => {
+  console.log("Start Your enginens at  http://localhost:8000");
+});
 
 
 
-// Set up routes
-app.get("/hello", (req, res) => {
-  res.send({ message: "I am awake. I think I am programmed to destroy all life." })
-})
-
-
-
-
-
-
-
-
-
-
-
-// Start the server
-app.listen(7777, () => {
-    console.log("Vroom your engines at http://localhost:7777");
-  });
-
-
- 
-  

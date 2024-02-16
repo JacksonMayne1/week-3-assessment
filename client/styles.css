@@ -4,8 +4,8 @@ body {
     align-items: center;
     text-align: center;
   }
-  
-  .drink-card {
+
+  .car-card {
     border: solid 1px grey;
     display: flex;
     flex-direction: column;
@@ -13,14 +13,14 @@ body {
     padding: 10px;
     width: 25%;
   }
-  
-  #drinkDisplay {
+
+  #carDisplay {
     width: 80vw;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
   }
-  
+
   img {
     min-height: 100px;
     min-width: 200px;
